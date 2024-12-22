@@ -1,4 +1,3 @@
-# Define the function
 def daily_reminder():
     # Prompt the user for task details
     task = input("Enter your task: ")
@@ -16,11 +15,14 @@ def daily_reminder():
         case _:
             priority_message = "task with an unknown priority"
 
-    # Check if the task is time-bound
+    # Construct reminder message based on time sensitivity
     if time_bound == 'yes':
-        reminder_message = f"Reminder: '{task}' is a {priority_message} that requires immediate attention today!"
+        action_message = "that requires immediate attention today!"
     else:
-        reminder_message = f"Note: '{task}' is a {priority_message}. Consider completing it when you have free time."
+        action_message = "Consider completing it when you have free time."
+
+    # Combine both priority and time sensitivity into one message
+    reminder_message = f"Reminder: '{task}' is a {priority_message}. {action_message}"
 
     # Print the reminder message
     print(reminder_message)
