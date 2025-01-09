@@ -21,8 +21,6 @@ match priority:
 
 # Construct reminder message based on time sensitivity
 if time_bound == 'yes':
-    action_message = "that requires immediate attention today!"
+    print(f"Reminder: '{task}' is a {priority_message} that requires immediate attention today!")
 else:
-    action_message = "Consider completing it when you have free time."
-# Print the reminder message
-print(f"Reminder: '{task}' is a {priority_message}. {action_message}")
+    print(f"Reminder: '{task}' is a {priority_message}. Consider completing it when you have free time.")
