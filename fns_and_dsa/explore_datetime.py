@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 # Part 1 - Display current date and time
 
 def display_current_datetime():
-    current_date = datetime.now()
+    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print("Current date and time: ", current_date)
 
 
